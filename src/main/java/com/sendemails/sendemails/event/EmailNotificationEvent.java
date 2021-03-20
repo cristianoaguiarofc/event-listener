@@ -2,9 +2,9 @@ package com.sendemails.sendemails.event;
 
 import org.springframework.context.ApplicationEvent;
 
-public class NotificationEvent extends ApplicationEvent {
+public class EmailNotificationEvent extends ApplicationEvent {
 
-    public NotificationEvent(Object source) {
+    public EmailNotificationEvent(Object source) {
         super(source);
     }
 

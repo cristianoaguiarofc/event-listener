@@ -13,7 +13,7 @@ public class SendMessageController {
     @Autowired
     private SendMessageService sendMessageService;
 
-    @PostMapping("/teste")
+    @PostMapping("/send")
     public ResponseEntity sendMessage(@RequestBody String message) {
         sendMessageService.sendMessage(message);
 

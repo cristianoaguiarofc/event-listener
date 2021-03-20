@@ -1,6 +1,6 @@
 package com.sendemails.sendemails.service;
 
-import com.sendemails.sendemails.event.NotificationEvent;
+import com.sendemails.sendemails.event.EmailNotificationEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
@@ -12,7 +12,7 @@ public class SendMessageService {
     private ApplicationEventPublisher applicationEventPublisher;
 
     public void sendMessage(final String message) {
-        NotificationEvent notificationEvent = new NotificationEvent(message);
-        applicationEventPublisher.publishEvent(notificationEvent);
+        EmailNotificationEvent emailNotificationEvent = new EmailNotificationEvent(message);
+        applicationEventPublisher.publishEvent(emailNotificationEvent);
     }
 }
